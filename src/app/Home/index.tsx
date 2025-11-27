@@ -39,7 +39,7 @@ export function Home() {
     await itemsStorage.add(newItem);
     await itemsByStatus();
 
-    Alert.alert("Adicionado", `Adicionado ${description}`);
+    // Alert.alert("Adicionado", `Adicionado ${description}`);
     setFilter(FilterStatus.PENDING);
     setDescription("");
   }
@@ -103,6 +103,7 @@ export function Home() {
         <Input
           placeholder="O que você precisa comprar?"
           onChangeText={setDescription}
+          value={description}
         />
         <Button title="Adicionar" activeOpacity={0.8} onPress={handleAdd} />
       </View>
